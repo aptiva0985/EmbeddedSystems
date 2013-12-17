@@ -1,0 +1,6 @@
+PROGS_TWISTER_OBJS := twister.o twist_num.o
+PROGS_TWISTER_OBJS := $(PROGS_TWISTER_OBJS:%=$(TDIR)/twister/%)
+ALL_OBJS += $(PROGS_TWISTER_OBJS)
+
+$(TDIR)/bin/twister : $(TSTART) $(PROGS_TWISTER_OBJS) $(TLIBC)
+

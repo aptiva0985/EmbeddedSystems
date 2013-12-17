@@ -1,0 +1,6 @@
+PROGS_SPLAT_OBJS := splat.o
+PROGS_SPLAT_OBJS := $(PROGS_SPLAT_OBJS:%=$(TDIR)/splat/%)
+ALL_OBJS += $(PROGS_SPLAT_OBJS)
+
+$(TDIR)/bin/splat : $(TSTART) $(PROGS_SPLAT_OBJS) $(TLIBC)
+

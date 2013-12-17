@@ -1,0 +1,78 @@
+/**
+ * Group 32: part2.txt
+ * Yuanshuo Cui (ycui)
+ * Yujing Zhang (yujingz)
+ * Liyu Ma (liyum)
+ */
+
+strTable.s optimization
+
+Attempt 1: Reduce redundant moves among registers
+In the beginning of this function, the program copies the value of arguments into 
+other general registers and uses them for following operations. To reduce these 
+moves, e.g. mov r4, r2, we can use r2 instead of r4 which is used for storing the 
+value of r2 in the original program. Also, in the original program, r2 is used 
+for storing results of operations, and now we can use r4 or other registers. 
+Similar rule can also be applied to r0, r3 and r5.
+
+Attempt 2: Combine common code in .L9 and .L7
+.L9 and .L7 both contain part of codes that do subtraction with 23 and compare 
+result with 22.
+sub	ip, ip, #23
+cmp	ip, #22
+Although they use different registers for subtraction operation, with careful 
+revising the code, we can combine them together and reduce the code size.
+
+Attempt 3: Reduce memory access and comparison
+In .L13, the original code reads two characters from source string and destination 
+string respectively and compare them. If they are different, replace the character
+at source string with that at destinations string. In this case, the program will
+at least do two memory accesses and if characters are different, it will perform
+the third memory access. Therefore, to reduce number of memory access and also 
+comparison, we simply replace the character at source string with that at 
+destinations string without reading the character at source string from memory
+and comparing them.
+
+Attempt 4: Pseudo binary search
+The program does an mod 23 operation for ASCII characters. As we know the range
+of ASCII code is 0 to 127, so the subtraction from 23 can be 0 to 5 times. To reduce
+number of loops for large ASCII code numbers, we can subtract 69 first and then 
+try to compare the result with 22 and perform subtraction with 23 if necessary.
+The reasons to choose 69 are that it is about half of 127 and it is multiple of 23.
+Therefore we can reduce the number of subtractions to 0 to 3 times. The number
+of loops will also be reduced.
+
+Cost of optimized code
+----------------------------
+|Type               |Count |
+----------------------------
+|Instructions       | 20   |
+----------------------------
+|Load-Store         | 30   |
+----------------------------
+|Conditional-branch | 31   |
+----------------------------
+|Normal             | 56   |
+----------------------------
+|Total              | 339  |
+----------------------------
+
+
+part2c.c optimization
+
+Attempt 1: XOR
+This method use property of XOR, which a number xor with itself is zero,
+and we know only one number in the array appear once, also 0 xor any number
+is the number itself. If we xor all numbers in the array, the final result
+will be the number we want.
+Time complexity: O(n), space complexity: O(1).
+Compared to original algorithm whose time complexity is O(n^2) and space complexity
+is O(1), the optimized algorithm will be much faster.
+
+Attempt 2: Sum of 1-n
+If every number appear twice, we can compute the sum of all numbers with
+formula: 2*n*(n+1)/2 (n*(n+1)). So if we minus all numbers in the array from
+the sum value, we can get the odd one.
+Time complexity: O(n), space complexity: O(1).
+Compared to original algorithm whose time complexity is O(n^2) and space complexity
+is O(1), the optimized algorithm will be much faster.

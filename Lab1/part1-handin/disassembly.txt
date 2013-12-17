@@ -1,0 +1,18 @@
+/**
+ * Group 32: Hello.c
+ * Yuanshuo Cui (ycui)
+ * Yujing Zhang (yujingz)
+ * Liyu Ma (liyum)
+ */
+
+1. What is the entry point address of the program? (Hint: The readelf program may provide a clue.)
+A: By using readelf -h command, the header of ELF told us the entry point address is 0x82dc.
+
+2. What is the name of the first function branched to in the program? (Hint: One of readelf -s, readelf -r, objdump -t, or objdump -T may provide a clue.)
+A: By using readelf -s command, the first entry in system symbol table that has "FUNC" type is call_gmon_start. And it is the first function branched to in the program.
+
+3. What is the key difference between the output of objdump -d (hello-d.txt) and objdump -D (hello-bigd.txt)?
+A: objdump -d will display the assembler contents for all executable sections in the dumped file, includes .init, .plt, .text and .fini. And objdump -D will display assembler contents for all sections.
+
+4. Is the interpretation of the instructions under the .rodata section of hello-bigd.txt correct? What does this interpretation mean?
+A: It is correct, by interpreting the content under .rodata section as ASCII code, we can find out the content of .rodata section contains "Hello world!". And the interpretation means all strings used for printing in the program is saved in this section, which is consistent with the string we interpreted.

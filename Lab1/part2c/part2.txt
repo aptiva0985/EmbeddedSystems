@@ -1,0 +1,22 @@
+/**
+ * Group 32: part2.txt
+ * Yuanshuo Cui (ycui)
+ * Yujing Zhang (yujingz)
+ * Liyu Ma (liyum)
+ */
+
+
+part2c.c optimization
+
+Attempt 1:
+This method use property of XOR, which a number xor with itself is zero,
+and we know only one number in the array appear once, also 0 xor any number
+is the number itself. If we xor all numbers in the array, the final result
+will be the number we want.
+Time complexity: O(n), space complexity: O(1).
+
+Attempt 2:
+If every number appear twice, we can compute the sum of all numbers with
+formula: 2*n*(n+1)/2 (n*(n+1)). So if we minus all numbers in the array from
+the sum value, we can get the odd one.
+Time complexity: O(n), space complexity: O(1).

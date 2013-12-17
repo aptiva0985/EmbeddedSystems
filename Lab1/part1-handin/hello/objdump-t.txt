@@ -1,0 +1,81 @@
+
+hello:     file format elf32-littlearm
+
+SYMBOL TABLE:
+00008114 l    d  .interp	00000000              .interp
+00008128 l    d  .note.ABI-tag	00000000              .note.ABI-tag
+00008148 l    d  .hash	00000000              .hash
+00008174 l    d  .dynsym	00000000              .dynsym
+000081d4 l    d  .dynstr	00000000              .dynstr
+0000821a l    d  .gnu.version	00000000              .gnu.version
+00008228 l    d  .gnu.version_r	00000000              .gnu.version_r
+00008248 l    d  .rel.dyn	00000000              .rel.dyn
+00008250 l    d  .rel.plt	00000000              .rel.plt
+00008278 l    d  .init	00000000              .init
+0000828c l    d  .plt	00000000              .plt
+000082dc l    d  .text	00000000              .text
+00008434 l    d  .fini	00000000              .fini
+00008444 l    d  .rodata	00000000              .rodata
+00008458 l    d  .ARM.exidx	00000000              .ARM.exidx
+00008460 l    d  .eh_frame	00000000              .eh_frame
+00010464 l    d  .init_array	00000000              .init_array
+00010468 l    d  .fini_array	00000000              .fini_array
+0001046c l    d  .jcr	00000000              .jcr
+00010470 l    d  .dynamic	00000000              .dynamic
+00010558 l    d  .got	00000000              .got
+0001057c l    d  .data	00000000              .data
+00010584 l    d  .bss	00000000              .bss
+00000000 l    d  .comment	00000000              .comment
+00000000 l    d  .debug_aranges	00000000              .debug_aranges
+00000000 l    d  .debug_info	00000000              .debug_info
+00000000 l    d  .debug_abbrev	00000000              .debug_abbrev
+00000000 l    d  .debug_line	00000000              .debug_line
+00000000 l    d  .debug_ranges	00000000              .debug_ranges
+00000000 l    d  .ARM.attributes	00000000              .ARM.attributes
+00000000 l    df *ABS*	00000000              initfini.c
+00008314 l     F .text	00000000              call_gmon_start
+00000000 l    df *ABS*	00000000              init.c
+00000000 l    df *ABS*	00000000              initfini.c
+00000000 l    df *ABS*	00000000              crtstuff.c
+0001046c l     O .jcr	00000000              __JCR_LIST__
+00010584 l     O .bss	00000001              completed.5295
+00008344 l     F .text	00000000              __do_global_dtors_aux
+00010468 l     O .fini_array	00000000              __do_global_dtors_aux_fini_array_entry
+00008360 l     F .text	00000000              frame_dummy
+00010464 l     O .init_array	00000000              __frame_dummy_init_array_entry
+00000000 l    df *ABS*	00000000              hello.c
+00000000 l    df *ABS*	00000000              elf-init.c
+00000000 l    df *ABS*	00000000              crtstuff.c
+00008460 l     O .eh_frame	00000000              __FRAME_END__
+0001046c l     O .jcr	00000000              __JCR_END__
+00010558 l     O .got	00000000              .hidden _GLOBAL_OFFSET_TABLE_
+00010468 l       .init_array	00000000              .hidden __init_array_end
+00010464 l       .init_array	00000000              .hidden __init_array_start
+00010470 l     O .dynamic	00000000              .hidden _DYNAMIC
+0001057c  w      .data	00000000              data_start
+000082a0       F *UND*	000002a8              abort@@GLIBC_2.4
+000083c4 g     F .text	00000004              __libc_csu_fini
+000082dc g     F .text	00000000              _start
+000082ac       F *UND*	00000204              __libc_start_main@@GLIBC_2.4
+00000000  w      *UND*	00000000              __gmon_start__
+00000000  w      *UND*	00000000              _Jv_RegisterClasses
+00008434 g     F .fini	00000000              _fini
+00008444 g     O .rodata	00000004              _IO_stdin_used
+0001057c g       .data	00000000              __data_start
+00010584 g       *ABS*	00000000              __bss_start__
+00008460 g       *ABS*	00000000              __exidx_end
+00010580 g     O .data	00000000              .hidden __dso_handle
+00010588 g       *ABS*	00000000              __end__
+000083c8 g     F .text	0000006c              __libc_csu_init
+00010588 g       *ABS*	00000000              __bss_end__
+00010584 g       *ABS*	00000000              __bss_start
+00010588 g       *ABS*	00000000              _bss_end__
+000082c4       F *UND*	00000160              puts@@GLIBC_2.4
+00010588 g       *ABS*	00000000              _end
+00010584 g       *ABS*	00000000              _edata
+00008458 g       *ABS*	00000000              __exidx_start
+000082d0       F *UND*	000000dc              exit@@GLIBC_2.4
+00008398 g     F .text	0000002c              main
+00008278 g     F .init	00000000              _init
+
+

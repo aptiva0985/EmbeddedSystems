@@ -1,0 +1,11 @@
+
+hello:     file format elf32-littlearm
+
+DYNAMIC SYMBOL TABLE:
+000082a0      DF *UND*	000002a8  GLIBC_2.4   abort
+000082ac      DF *UND*	00000204  GLIBC_2.4   __libc_start_main
+00000000  w   D  *UND*	00000000              __gmon_start__
+000082c4      DF *UND*	00000160  GLIBC_2.4   puts
+000082d0      DF *UND*	000000dc  GLIBC_2.4   exit
+
+

@@ -1,0 +1,6 @@
+PROGS_EXIT_OBJS := exit.o
+PROGS_EXIT_OBJS := $(PROGS_EXIT_OBJS:%=$(TDIR)/exit/%)
+ALL_OBJS += $(PROGS_EXIT_OBJS)
+
+$(TDIR)/bin/exit : $(PROGS_EXIT_OBJS)
+

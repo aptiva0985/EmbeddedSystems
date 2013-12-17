@@ -1,0 +1,4 @@
+/* GNU ld script
+ * Use the shared library, but some functions are only in
+ * the static library, so try that secondarily. */
+GROUP ( /afs/ece/class/ee349/gumstix/opt/lib/libc.so.0 /afs/ece/class/ee349/gumstix/opt/lib/uclibc_nonshared.a /afs/ece/class/ee349/gumstix/opt/lib/ld-uClibc.so.0 )

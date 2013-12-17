@@ -1,0 +1,11 @@
+1. Discounting hidden files, what are the files that are in the repository? What are their names? What are their contents?
+A: There are two files in the repository, with names "file1" and "file2".
+   The content in file1 is "This is version 1.0 of file1. This should be verion 2.0 of file1."
+   The content in file2 is "This if version 1.0 of file2.".
+
+2. What is the userid of the person who committed those files?
+A: The of the person who committed those files is "rgandhi".
+
+3. When did (s)he commit them (date and time) and what was the commit message?
+A: There are two commits. The first one happened at 2009-09-21 15:33:09 -0400 (Mon, 21 Sep 2009), and the commit message is "initial version".
+   The second one happened at 2009-09-21 15:35:00 -0400, and the commit message is "updated file1".

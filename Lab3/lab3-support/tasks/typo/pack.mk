@@ -1,0 +1,6 @@
+PROGS_TYPO_OBJS := typo.o
+PROGS_TYPO_OBJS := $(PROGS_TYPO_OBJS:%=$(TDIR)/typo/%)
+ALL_OBJS += $(PROGS_TYPO_OBJS)
+
+$(TDIR)/bin/typo : $(TSTART) $(PROGS_TYPO_OBJS) $(TLIBC)
+
